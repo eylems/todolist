@@ -1,50 +1,65 @@
-# React + TypeScript + Vite
+# Todo List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, **React, TypeScript ve Vite** kullanılarak geliştirilmiş bir **Yapılacaklar Listesi (Todo List)** uygulamasıdır. Kullanıcılar yeni görev ekleyebilir, görevlerini düzenleyebilir, silebilir ve sürükleyip bırakma (drag and drop) özelliği ile sıralamalarını değiştirebilir.
 
-Currently, two official plugins are available:
+## 🚀 Teknolojiler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Bu proje aşağıdaki teknolojiler kullanılarak geliştirildi:
 
-## Expanding the ESLint configuration
+- [React](https://react.dev/) - Kullanıcı Arayüzü (UI) kütüphanesi
+- [TypeScript](https://www.typescriptlang.org/) - Tip güvenli JavaScript
+- [Vite](https://vitejs.dev/) - Hızlı ve modern build aracı
+- [React Beautiful DnD](https://github.com/atlassian/react-beautiful-dnd) - Sürükle ve bırak (drag and drop) desteği
+- [Styled Components](https://styled-components.com/) - CSS-in-JS ile stilleme
+- [ESLint](https://eslint.org/) - Kod kalitesi ve linter
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🎯 Kurulum & Çalıştırma
 
-- Configure the top-level `parserOptions` property like this:
+Projeyi yerel ortamına kurmak ve çalıştırmak için aşağıdaki adımları takip edebilirsin:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 1️⃣ Projeyi Klonla
+```sh
+git clone https://github.com/eylems/todolist.git
+cd todolist
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 2️⃣ Bağımlıkları Yükle
+```sh
+yarn install
+# veya
+yarn
 ```
+
+### 3️⃣ Uygulamayı Başlat
+```sh
+yarn dev
+```
+Bu komut, geliştirme sunucusunu başlatacak ve uygulama **http://localhost:5173/** adresinde çalışacak.
+
+## 📌 Özellikler
+
+✅ Yeni görev ekleme  
+✅ Görevleri düzenleme ve güncelleme  
+✅ Görevleri silme  
+✅ Sürükleyip bırakma ile sırayı değiştirme  
+✅ Responsive ve modern tasarım  
+
+## 🛠 Proje Yapısı
+```
+/todolist
+│── src
+│   ├── components    # UI bileşenleri
+│   ├── hooks         # Custom hook'lar
+│   ├── pages         # Sayfalar
+│   ├── styles        # Styled Components dosyaları
+│   ├── App.tsx       # Ana uygulama bileşeni
+│   ├── main.tsx      # React uygulamasını başlatan dosya
+│   └── ...
+│── public           # Statik dosyalar
+│── package.json     # Proje bağımlılıkları ve script'ler
+│── tsconfig.json    # TypeScript konfigürasyonu
+│── vite.config.ts   # Vite konfigürasyonu
+```
+
+
+
